@@ -1,11 +1,12 @@
 import streamlit as st
 from ollama import Client
+from config.config import OLLAMA_HOST
 
 
 class OllamaChatBot:
     def __init__(self, model):
         self.model = model
-        self.client = Client()
+        self.client = Client(host=OLLAMA_HOST)
         if "messages" not in st.session_state:
             st.session_state.messages = [
                 {

@@ -1,12 +1,14 @@
-import ollama
 import streamlit as st
+from ollama import Client
+
+from config.config import OLLAMA_HOST
 
 
 class SideBar:
     def __init__(self):
-        self.models = ollama.list()["models"]
-        if 'model' not in st.session_state:
-            st.session_state['model'] = self.models[0]['model']
+        self.models = Client(host=OLLAMA_HOST).list()["models"]
+        if "model" not in st.session_state:
+            st.session_state["model"] = self.models[0]["model"]
 
     def select_button(self, model_name):
         st.session_state.model = model_name
