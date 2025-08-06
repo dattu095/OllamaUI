@@ -33,6 +33,3 @@ streamlit run src/main.py
 ```
 After launching, open your browser and go to:
 [http://localhost:8501]
-
-## License
-![[LICENSE]]
