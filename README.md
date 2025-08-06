@@ -32,4 +32,4 @@ pip install -r requirements.txt
 streamlit run src/main.py
 ```
 After launching, open your browser and go to:
-[http://localhost:8501]
+[http://localhost:8501]()
